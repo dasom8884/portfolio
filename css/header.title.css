@@ -1,0 +1,217 @@
+body{
+ background-image: linear-gradient(#eee 1px,transparent 1px),linear-gradient(90deg, #eee 1px,transparent 1px);
+  background-size: 20px 20px;
+  background-repeat: repeat;
+  font-family: 'Pretendard-Regular';
+  }
+
+  /* 상단영역 */
+  header{
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  header div.wrap{
+  padding: 10px 0;
+  max-width: initial;
+  margin: 0 60px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+@keyframes scroll{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
+header div.wrap h1{
+  width: 150px;
+  margin: 0;
+  position: fixed;
+}
+header div.wrap h1 a{
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+header div.wrap h1 a img{
+  width: 100%;
+  height: 100%;
+}
+header div.wrap ul{
+  color: #fff;
+  font-weight: 300;
+  display: flex;
+  gap: 36px;
+  justify-content: right;
+  width: 100%;
+}
+header div.wrap ul.gnb{
+  }
+header div.wrap ul.gnb li{
+    
+  }
+header div.wrap ul.gnb li a{
+    padding: 5px 25px;
+    z-index: 1;
+    position: relative;
+    color: #555;
+  }
+header div.wrap ul.gnb li:hover a{
+    color: #333;
+  }
+header div.wrap ul.gnb li a:before{
+    content: "";
+    display: inline-block;
+    box-shadow: inset 0 0 0 2px #555;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    transition: box-shadow 0.25s;
+    margin-right: 10px;
+  }
+header div.wrap ul.gnb li:hover a:before{
+     box-shadow: inset 0 0 0 8px #333;
+  }
+header .wrap button{
+    display: none;
+  }
+  /* 타이틀영역 */
+  #title{
+    height: 100%;
+    display: flex;
+    align-items: end;
+    min-height: 700px;
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+  }
+  
+  #title div.wrap {
+    position: relative;
+    border-top: 5px solid;
+    width: 1440px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: #ffdee3;
+  }
+#title div.wrap::before{
+  content:'';
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  background-image: url(../img/Untitled-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -70px;
+  top: -50px;
+  transform: rotateY(180deg);
+}
+  #title div.wrap::after{
+  content:'';
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  background-image: url(../img/mouse.svg);
+  background-size: contain;
+  right: -100px;
+  bottom: 20%;
+  animation-name: Scroll;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+@keyframes Scroll{
+  0%{
+    transform: translateY(-15px);
+  }
+  50%{
+    transform: translateY(15px);
+  }
+  100%{
+    transform: translateY(-15px);
+  }
+
+}
+
+  #title div.wrap h2 {
+    font-size: 110px;
+    font-weight: bold;
+    z-index: 1;
+    margin-bottom:30px;
+    text-transform: uppercase;
+    position: relative;
+  }
+#title div.wrap h2::after{
+    display: none;
+}
+ #title div.wrap p::after{
+   content:'';
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  position: absolute;
+  background-image: url(../img/arrow-1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: -36%;
+  left: auto;
+   top: 15px;
+ }
+  #title div.wrap span{
+    animation-name: opacity;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    opacity: 0;
+    font-size: 40px;
+    margin-left: 68%;
+    margin-bottom: 5%;
+  }
+  @keyframes opacity{
+    100%{
+      opacity: 1;
+    }
+  }
+#title div.wrap p{
+  margin-bottom: 5%;
+  position: relative;
+}
+  #title div.wrap ul.menu{
+  margin-bottom: 30px;
+  }
+  #title div.wrap ul.menu li{
+    
+  }
+  #title div.wrap ul.menu li a{
+    padding: 5px 25px;
+    z-index: 1;
+    position: relative;
+    color: #666;
+  }
+ #title div.wrap ul.menu li:hover a{
+    color: #333;
+  }
+ #title div.wrap ul.menu li a:before{
+    content: "";
+    display: inline-block;
+    box-shadow: inset 0 0 0 2px #666;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    transition: box-shadow 0.25s;
+    margin-right: 10px;
+  }
+  #title div.wrap ul.menu li:hover a:before{
+     box-shadow: inset 0 0 0 8px #333;
+  }
